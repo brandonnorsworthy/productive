@@ -7,3 +7,77 @@
     --font-shaded: #676767;
 }
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/* ! HEADER BAR */
+header {
+    color: var(--font-color);
+    background-color: var(--card-background-dark);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    font-size: 24px;
+}
+
+header > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 15%;
+    margin-left: 10%;
+}
+
+.header-logo img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.header-title {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.header-buttons {
+    width: 15%;
+    justify-content: end;
+}
+
+.header-buttons button {
+    margin-right: 25px;
+    color: var(--font-highlight);
+    background-color: var(--card-background-dark);
+}
+
+.header-buttons button:last-child {
+    margin: none;
+}
+
+/* ! MAIN CONTENT */
+main {
+    display: flex;
+    width: 50%;
+    margin: 50px 25% 0 25%;
+    background-color: red;
+}
+
+/* ! MENU BUTTON NAVBAR */
+aside {
+    width: 30%;
+}
+
+/* ! RIGHT SIDE MAIN CONTENT */
+
+.card {
+    width: 70%;
+}
