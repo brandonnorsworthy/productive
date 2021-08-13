@@ -16,16 +16,17 @@ body {
 }
 
 /* ! HEADER BAR */
+
 header {
     color: var(--font-color);
     background-color: var(--card-background-dark);
     height: 50px;
     width: 100%;
     display: flex;
-    font-size: 24px;
+    font-size: 20px;
 }
 
-header > div {
+header>div {
     height: 100%;
     display: flex;
     align-items: center;
@@ -64,16 +65,67 @@ header > div {
 }
 
 /* ! MAIN CONTENT */
+
 main {
     display: flex;
     width: 50%;
     margin: 50px 25% 0 25%;
-    background-color: red;
 }
 
 /* ! MENU BUTTON NAVBAR */
+
 aside {
     width: 30%;
+    padding: 5px;
+    color: var(--font-shaded);
+}
+
+aside div div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    height: max-content;
+}
+
+aside div div:hover {
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+aside div div:first-child span {
+    border-radius: 50%;
+}
+
+aside div div span {
+    align-self: center;
+    text-align: center;
+    padding: 4px;
+    margin-right: 8px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+aside > p {
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+aside a {
+    color: var(--font-shaded);
+    text-decoration: none;
+}
+
+aside a:hover {
+    color: var(--font-highlight)
+}
+
+.active {
+    color: var(--font-highlight);
 }
 
 /* ! RIGHT SIDE MAIN CONTENT */
