@@ -5,6 +5,8 @@
     --font-color: #FFFFFF;
     --font-highlight: #45D4A7;
     --font-shaded: #676767;
+    --current-body-width: 50%;
+    --current-body-margin: 25%;
 }
 
 * {
@@ -43,7 +45,7 @@ header>div {
 }
 
 .header-title {
-    width: 50%;
+    width: var(--current-body-width);
     display: flex;
     justify-content: center;
     font-weight: 500;
@@ -68,8 +70,8 @@ header>div {
 
 main {
     display: flex;
-    width: 50%;
-    margin: 50px 25% 0 25%;
+    width: var(--current-body-width);
+    margin: 50px var(--current-body-margin) 0 var(--current-body-margin);
 }
 
 /* ! MENU BUTTON NAVBAR */
@@ -134,7 +136,7 @@ aside a:hover {
     width: 70%
 }
 
-.card {
+.habit {
     color: var(--font-color);
     background-color: var(--card-background-light);
     width: 100%;
@@ -142,11 +144,11 @@ aside a:hover {
     border-radius: 15px;
 }
 
-.card:hover {
+.habit:hover {
     cursor: default;
 }
 
-.card div {
+.habit div {
     margin: 0
 }
 
@@ -225,3 +227,5 @@ aside a:hover {
     display: flex;
     justify-content: end;
 }
+
+/* todo add media query that scrunches var(--current-body-width) and var(--current-body-margin) */
