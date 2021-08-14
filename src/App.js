@@ -1,11 +1,10 @@
 import Header from "./components/Header";
-import Aside from "./components/Aside";
-
+import Cards from "./components/Cards";
 function App() {
     return (
         <div className="container">
             <Header />
-            <Aside />
+            <Cards />
         </div>
     );
 }
