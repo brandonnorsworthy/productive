@@ -159,5 +159,5 @@
 .habit-col-b .row>*:last-child {
     width: 20%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
