@@ -1,17 +1,62 @@
-.card-body {
+/*! must explicitly state .create so we dont target any other cards */
+
+.create {
+    color: var(--font-color);
+    background-color: var(--background-color) !important;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 25px;
+    border: 0px;
+    font-size: 22px;
+}
+
+.create .card-body {
     flex-direction: column;
 }
 
-.create input {
+.create .row {
+    flex-direction: row;
+}
+
+.create-col-b,
+.create-col-a {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.create .icon {
+    padding: 25px;
     background-color: var(--card-background-light);
-    border-radius: 0px;
+}
+
+.create .icon:hover {
+    cursor: pointer;
+}
+
+.create input {
+    color: var(--font-color);
+    background-color: var(--card-background-light);
     border: none;
+    padding: 20px 25px 80px 25px;
 }
 
 .create button {
     background-color: var(--font-highlight);
+    color: var(--font-color);
+    padding: 12.5px;
+    font-weight: 500;
+    border-radius: 27.5px;
 }
 
 .create .row:nth-child(1) input {
+    padding: 20px 25px 20px 25px;
+    border-top-left-radius: 27.5px;
+    border-top-right-radius: 27.5px;
     border-bottom: 1px solid var(--font-shaded);
+}
+
+.create .row:nth-child(2) input {
+    border-bottom-left-radius: 27.5px;
+    border-bottom-right-radius: 27.5px;
 }

@@ -11,7 +11,7 @@ function Create() {
                 <div className="row">
                     <input type="text" name="description" placeholder="Description" />
                 </div>
-                <div className="row">
+                <div className="row mt-3">
                     <div className="create-col-a">
                         <div className="icon">
                             <span class="material-icons">
@@ -26,10 +26,10 @@ function Create() {
                                 palette
                             </span>
                         </div>
-                        Icon
+                        Color
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-3">
                     <div className="j-s">
                         Repeat
                     </div>
@@ -52,7 +52,7 @@ function Create() {
                         </span>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-3">
                     <button>
                         CREATE
                     </button>
