@@ -15,11 +15,18 @@ class App extends Component {
 	}
 
 	Clicked(e) {
-		console.log(e.target.attributes.name.value)
+		// default to whatever they click
+		let eventTarget = e.target
+
+		// if the current target is the span inside the div set the target to the parent
+		if(eventTarget.tagName === 'SPAN') {
+			eventTarget = eventTarget.parentElement;
+			console.log('reassigned', eventTarget)
+		}
+
 		this.setState({
-			currentContent: e.target.attributes.name.value
-		})
-		console.log('state', this.state.currentContent)
+			currentContent: eventTarget.attributes.name.value
+		});
 	}
 
 	render() {

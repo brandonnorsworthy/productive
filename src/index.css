@@ -22,6 +22,35 @@ body {
     height: 100%;
 }
 
+/* disable selection for any google icons */
+.material-icons {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--font-shaded);
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--font-shaded);
+}
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--font-shaded);
+}
+
 /* ! HEADER BAR */
 
 header {
@@ -61,8 +90,7 @@ header>div {
     justify-content: end;
 }
 
-.header-buttons a,
-.header-buttons button {
+.header-buttons a, .header-buttons button {
     text-decoration: none;
     margin-right: 25px;
     color: var(--font-highlight);
@@ -136,6 +164,5 @@ aside a:hover {
 .active {
     color: var(--font-highlight);
 }
-
 
 /* todo add media query that scrunches var(--current-body-width) and var(--current-body-margin) */
