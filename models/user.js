@@ -6,6 +6,7 @@ const userSchema = new Schema({
     email: {
         type: String,
         trim: true,
+        unique: true,
         match: [/.+@.+\..+/, "Make sure what you have typed is an email!"],
         required: "Please enter an email"
     },
@@ -13,6 +14,10 @@ const userSchema = new Schema({
         type: String,
         trim: true,
         required: "Please enter a password"
+    },
+    habits: {
+        type: Schema.Types.ObjectId,
+        ref: 'Habits'
     }
 });
 
