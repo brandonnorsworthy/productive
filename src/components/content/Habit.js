@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Habit() {
+function Habit(props) {
     return (
         <div className="habit card">
             <div className="card-body">
