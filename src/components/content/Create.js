@@ -1,14 +1,67 @@
 import React from 'react'
+import '../../create.css'
 
-function Habit() {
+function Create() {
     return (
-        <div className="habit card">
+        <div className="create card">
             <div className="card-body">
-                <div className="habit-col-a">
+                <div className="row">
+                    <input type="text" name="title" placeholder="Title" />
+                </div>
+                <div className="row">
+                    <input type="text" name="description" placeholder="Description" />
+                </div>
+                <div className="row">
+                    <div className="create-col-a">
+                        <div className="icon">
+                            <span>
+                                google-icon
+                            </span>
+                        </div>
+                        Icon
+                    </div>
+                    <div className="create-col-b">
+                        <div className="icon">
+                            <span>
+                                google-icon
+                            </span>
+                        </div>
+                        Icon
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="j-s">
+                        Repeat
+                    </div>
+                    <div className="j-e">
+                        <span>
+                            toggle_on
+                        </span>
+                    </div>
+                </div>
+                <div className="row">
+                    Weekends
+                </div>
+                <div className="row">
+                    <div className="j-s">
+                        Set end date
+                    </div>
+                    <div className="j-s">
+                        <span>
+                            toggle_off
+                        </span>
+                    </div>
+                </div>
+                <div className="row">
+                    <button>
+                        CREATE
+                    </button>
+                </div>
+                {/* <div className="create-col-a">
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">water_drop</span>
                 </div>
-                <div className="habit-col-b">
+                <div className="create-col-b">
                     <div className="row">
                         <div>
                             <h2>Lorem, ipsum dolor sit amet consectetur adipisicing</h2>
@@ -26,10 +79,10 @@ function Habit() {
                             <p>Glasses</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
 }
 
-export default Habit
+export default Create
