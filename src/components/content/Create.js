@@ -14,16 +14,16 @@ function Create() {
                 <div className="row">
                     <div className="create-col-a">
                         <div className="icon">
-                            <span>
-                                google-icon
+                            <span class="material-icons">
+                                shopping_cart
                             </span>
                         </div>
                         Icon
                     </div>
                     <div className="create-col-b">
                         <div className="icon">
-                            <span>
-                                google-icon
+                            <span class="material-icons">
+                                palette
                             </span>
                         </div>
                         Icon
@@ -34,7 +34,7 @@ function Create() {
                         Repeat
                     </div>
                     <div className="j-e">
-                        <span>
+                        <span class="material-icons">
                             toggle_on
                         </span>
                     </div>
@@ -47,7 +47,7 @@ function Create() {
                         Set end date
                     </div>
                     <div className="j-s">
-                        <span>
+                        <span class="material-icons">
                             toggle_off
                         </span>
                     </div>
