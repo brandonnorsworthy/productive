@@ -16,7 +16,7 @@ function Content(props) {
     return (
         <div className="content">
             {props.currentContent === 'Today' ? <Hero /> : <></>}
-            {props.currentContent === 'Today' || props.currentContent === 'Habit' ? <Habit habit={habit} /> :  <></>}
+            {props.currentContent === 'Create' ? <Create /> : props.currentContent === 'Today' || props.currentContent === 'Habit' ? <Habit habit={habit} /> :  <></>}
         </div>
     )
 }
