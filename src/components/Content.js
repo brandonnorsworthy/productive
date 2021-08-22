@@ -3,11 +3,12 @@ import Hero from './content/Hero'
 import Habit from './content/Habit'
 import '../cards.css'
 
-function Content() {
+function Content(props) {
+    console.log("props", props)
     return (
         <div className="content">
-            <Hero />
-            <Habit />
+            {props.currentContent === 'Today' ? <Hero /> : console.log('error')}
+            {props.currentContent === 'Today' || props.currentContent === 'Habit' ? <Habit /> : console.log('error')}
         </div>
     )
 }
