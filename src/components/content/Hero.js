@@ -1,4 +1,6 @@
 import React from 'react'
+import Moment from 'react-moment';
+var moment = require('moment');
 
 function Hero() {
     return (
@@ -6,32 +8,32 @@ function Hero() {
             <div className="hero-card-body card-body">
                 <div className="hero-row-a">
                     <div className="hero-weekday">
-                        <div className="hero-week-date">SUN</div>
-                        <div className="hero-week-date"><b>19</b></div>
+                        <div className="hero-week-date">{moment().subtract(3, 'days').format('ddd')}</div>
+                        <div className="hero-week-date"><b>{moment().subtract(3, 'days').format('D')}</b></div>
                     </div>
                     <div className="hero-weekday">
-                        <div className="hero-week-date">MON</div>
-                        <div className="hero-week-date"><b>20</b></div>
+                        <div className="hero-week-date">{moment().subtract(2, 'days').format('ddd')}</div>
+                        <div className="hero-week-date"><b>{moment().subtract(2, 'days').format('D')}</b></div>
                     </div>
                     <div className="hero-weekday">
-                        <div className="hero-week-date">TUE</div>
-                        <div className="hero-week-date"><b>21</b></div>
-                    </div>
-                    <div className="hero-weekday">
-                        <div className="hero-week-date">WED</div>
-                        <div className="hero-week-date"><b>22</b></div>
+                        <div className="hero-week-date">{moment().subtract(1, 'days').format('ddd')}</div>
+                        <div className="hero-week-date"><b>{moment().subtract(1, 'days').format('D')}</b></div>
                     </div>
                     <div className="hero-weekday hero-weekday-active">
-                        <div className="hero-week-date">THU</div>
-                        <div className="hero-week-date"><b>23</b></div>
+                        <div className="hero-week-date"><Moment format="ddd"></Moment></div>
+                        <div className="hero-week-date"><b><Moment format="D"></Moment></b></div>
                     </div>
                     <div className="hero-weekday">
-                        <div className="hero-week-date">FRI</div>
-                        <div className="hero-week-date"><b>24</b></div>
+                        <div className="hero-week-date">{moment().add(1, 'days').format('ddd')}</div>
+                        <div className="hero-week-date"><b>{moment().add(1, 'days').format('D')}</b></div>
                     </div>
                     <div className="hero-weekday">
-                        <div className="hero-week-date">SAT</div>
-                        <div className="hero-week-date"><b>25</b></div>
+                        <div className="hero-week-date">{moment().add(2, 'days').format('ddd')}</div>
+                        <div className="hero-week-date"><b>{moment().add(2, 'days').format('D')}</b></div>
+                    </div>
+                    <div className="hero-weekday">
+                        <div className="hero-week-date">{moment().add(3, 'days').format('ddd')}</div>
+                        <div className="hero-week-date"><b>{moment().add(3, 'days').format('D')}</b></div>
                     </div>
                 </div>
                 <div className="hero-row-b">
