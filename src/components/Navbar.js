@@ -1,38 +1,39 @@
 import React from 'react'
 
-function Header() {
+function Navbar(props) {
+    console.log(props)
     return (
         <aside>
             <div>
-                <div>
+                <div onClick={props.Clicked} name="Create" className={props.currentContent === "Create" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">
                         create
                     </span>
                     Create
                 </div>
-                <div className="active">
+                <div onClick={props.Clicked} name="Today" className={props.currentContent === "Today" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">
                         task_alt
                     </span>
                     Today
                 </div>
-                <div>
+                <div onClick={props.Clicked} name="Stats" className={props.currentContent === "Stats" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">
                         event_available
                     </span>
                     Stats
                 </div>
-                <div>
+                <div onClick={props.Clicked} name="Habits" className={props.currentContent === "Habits" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">
                         format_list_bulleted
                     </span>
                     Habits
                 </div>
-                <div>
+                <div onClick={props.Clicked} name="Settings" className={props.currentContent === "Settings" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">
                         settings
@@ -56,4 +57,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Navbar

@@ -61,7 +61,9 @@ header>div {
     justify-content: end;
 }
 
+.header-buttons a,
 .header-buttons button {
+    text-decoration: none;
     margin-right: 25px;
     color: var(--font-highlight);
     background-color: var(--card-background-dark);
