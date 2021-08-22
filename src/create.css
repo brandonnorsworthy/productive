@@ -1,0 +1,17 @@
+.card-body {
+    flex-direction: column;
+}
+
+.create input {
+    background-color: var(--card-background-light);
+    border-radius: 0px;
+    border: none;
+}
+
+.create button {
+    background-color: var(--font-highlight);
+}
+
+.create .row:nth-child(1) input {
+    border-bottom: 1px solid var(--font-shaded);
+}
