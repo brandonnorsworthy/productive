@@ -8,8 +8,10 @@ function Header() {
             </div>
             <div className="header-title">Today</div>
             <div className="header-buttons">
+                <a href="https://github.com/brandonnorsworthy/productive" target="_blank" rel="noreferrer" alt="">GitHub</a>
+                <a href="https://www.figma.com/file/GeqG7ziw4s18g7aSJ7K29e/Productive" target="_blank" rel="noreferrer" alt="">Figma</a>
                 <button id="login">Login</button>
-                <button id="login">Sign Up</button>
+                <button id="login">Sign&nbsp;Up</button>
             </div>
         </header>
     )

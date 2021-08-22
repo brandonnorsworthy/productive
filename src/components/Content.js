@@ -3,7 +3,7 @@ import Hero from './content/Hero'
 import Habit from './content/Habit'
 import '../cards.css'
 
-function Header() {
+function Content() {
     return (
         <div className="content">
             <Hero />
@@ -12,4 +12,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Content
