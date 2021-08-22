@@ -8,7 +8,7 @@ function Content(props) {
     return (
         <div className="content">
             {props.currentContent === 'Today' ? <Hero /> : console.log('error')}
-            {props.currentContent === 'Today' || props.currentContent === 'Habit' ? <Habit /> : console.log('error')}
+            {props.currentContent === 'Today' || props.currentContent === 'Habits' ? <Habit /> : console.log('error')}
         </div>
     )
 }
