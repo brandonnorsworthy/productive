@@ -29,7 +29,7 @@ function Create() {
                         Color
                     </div>
                 </div>
-                <div className="row mt-3">
+                <div className="row create-options mt-3">
                     <div className="j-s">
                         Repeat
                     </div>
@@ -39,14 +39,21 @@ function Create() {
                         </span>
                     </div>
                 </div>
-                <div className="row">
-                    Weekends
+                <div className="row create-options">
+                    <div className="j-s">
+                        Weekends
+                    </div>
+                    <div className="j-e">
+                        <span class="material-icons">
+                            date_range
+                        </span>
+                    </div>
                 </div>
-                <div className="row">
+                <div className="row create-options">
                     <div className="j-s">
                         Set end date
                     </div>
-                    <div className="j-s">
+                    <div className="j-e">
                         <span class="material-icons">
                             toggle_off
                         </span>
