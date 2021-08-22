@@ -61,8 +61,7 @@ header>div {
     justify-content: end;
 }
 
-.header-buttons a,
-.header-buttons button {
+.header-buttons a, .header-buttons button {
     text-decoration: none;
     margin-right: 25px;
     color: var(--font-highlight);
@@ -90,6 +89,17 @@ aside {
 }
 
 aside div div {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -136,6 +146,5 @@ aside a:hover {
 .active {
     color: var(--font-highlight);
 }
-
 
 /* todo add media query that scrunches var(--current-body-width) and var(--current-body-margin) */
