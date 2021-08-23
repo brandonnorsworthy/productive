@@ -172,3 +172,15 @@
     display: flex;
     justify-content: flex-end;
 }
+
+@media only screen and (max-width: 576px) {
+    main {
+        margin-right: 1vw;
+        margin-left: 1vw;
+        width: 98vw;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
