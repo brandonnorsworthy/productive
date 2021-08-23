@@ -9,17 +9,8 @@ function App() {
 	const [currentPage, setCurrentPage] = useState('Home');
 	const [currentContent, setCurrentContent] = useState('Today');
 
-	const handlePageChange = (page) => {
-		console.log(page)
-		setCurrentPage(page)
-		console.log(currentPage)
-	}
-
-	const handlecurrentContentChange = (page) => {
-		console.log(page)
-		setCurrentContent(page)
-		console.log(currentPage)
-	}
+	const handlePageChange = (page) => setCurrentPage(page)
+	const handlecurrentContentChange = (page) => setCurrentContent(page)
 
 	return (
 		<>
@@ -30,11 +21,11 @@ function App() {
 						<Navbar currentContent={currentContent} handlecurrentContentChange={handlecurrentContentChange} />,
 						<Content currentContent={currentContent} />
 					] :
-						<Login currentPage={currentPage} />
+						<Login currentPage={currentPage} handlePageChange={handlePageChange}/>
 				}
 			</main>
 		</>
 	);
 }
 
-export default App
+export default App;
