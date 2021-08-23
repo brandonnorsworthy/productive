@@ -24,7 +24,7 @@ const habitsSchema = new Schema({
     },
     days: {
         type: Array,
-        defualt: [true,true,true,true,true,true,true]
+        default: [true,true,true,true,true,true,true]
     },
 })
 
