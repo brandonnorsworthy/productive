@@ -15,6 +15,7 @@
 }
 
 body {
+    overflow-x: hidden;
     background-color: var(--background-color);
 }
 
@@ -166,3 +167,39 @@ aside a:hover {
 }
 
 /* todo add media query that scrunches var(--current-body-width) and var(--current-body-margin) */
+@media only screen and (max-width: 768px) {
+    .header-buttons {
+        display: none;
+    }
+
+    aside {
+        background-color: var(--card-background-dark);
+        -webkit-backface-visibility: hidden;
+        z-index: 150;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+    }
+
+    aside>div {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px 20px;
+    }
+
+    aside>div>div {
+        margin: 0px;
+    }
+
+    aside span {
+        font-size: 25px !important;
+    }
+
+    aside p {
+        display: none;
+    }
+
+}
