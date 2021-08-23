@@ -166,7 +166,6 @@ aside a:hover {
     color: var(--font-highlight);
 }
 
-/* todo add media query that scrunches var(--current-body-width) and var(--current-body-margin) */
 @media only screen and (max-width: 576px) {
     .header-buttons {
         display: none;
@@ -174,6 +173,7 @@ aside a:hover {
 
     aside {
         background-color: var(--card-background-dark);
+        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         z-index: 150;
         position: fixed;
