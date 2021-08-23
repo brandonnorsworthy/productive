@@ -19,7 +19,7 @@ class App extends Component {
 		let eventTarget = e.target
 
 		// if the current target is the span inside the div set the target to the parent
-		if(eventTarget.tagName === 'SPAN') {
+		if(eventTarget.tagName === 'SPAN' || eventTarget.tagName === 'P') {
 			eventTarget = eventTarget.parentElement;
 			console.log('reassigned', eventTarget)
 		}
