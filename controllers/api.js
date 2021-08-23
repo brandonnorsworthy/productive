@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const mongojs = require('mongojs')
 const {User} = require('../models/index');
 
 router.post('/api/user', ({body}, res) => {
@@ -11,6 +12,13 @@ router.post('/api/user', ({body}, res) => {
     })
 })
 
-
-
+router.get('/api/user/:id', (req, res) => {
+    User.findOne({_id : mongojs.ObjectId(req.params.id)})
+    .then(data => {
+        res.status(200).json(data);
+    })
+    .catch(err => {
+        res.status(400).json(err)
+    })
+})
 module.exports = router;
