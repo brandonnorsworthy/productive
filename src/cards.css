@@ -101,6 +101,17 @@
 }
 
 .habit-col-a span {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
     align-self: center;
     margin: 5px;
     font-size: 4rem;
@@ -160,4 +171,28 @@
     width: 20%;
     display: flex;
     justify-content: flex-end;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 100%;
+    }
 }
