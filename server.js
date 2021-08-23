@@ -1,36 +1,29 @@
-const path = require('path');
 const express = require('express');
-const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const logger = require('morgan');
+const mongoose = require('mongoose');
+const compression = require('compression');
 
-const routes = require('./controllers');
-const sequelize = require('./config/connection');
-
-const app = express();
 const PORT = process.env.PORT || 3001;
 
-const sess = {
-    // need .env with secret key
-    secret: 'secret',
-    cookie: {},
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-        db: sequelize,
-    }),
-};
+const app = express();
 
-app.use(session(sess));
 
+app.use(logger('dev'));
+
+app.use(compression());
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+app.use('/',require('./controllers/api.js'));
 
-app.use(routes);
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/productive',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false
+    }
+)
 
-sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening on port:', PORT));
-});
