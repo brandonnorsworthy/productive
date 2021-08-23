@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header() {
+function Header({ handlePageChange }) {
     return (
         <header>
             <div className="header-logo">
@@ -8,8 +8,8 @@ function Header() {
             </div>
             <div className="header-title">Today</div>
             <div className="header-buttons">
-                <button id="login">Login</button>
-                <button id="login">Sign&nbsp;Up</button>
+                <button onClick={() => handlePageChange('login')} id="login">Login</button>
+                <button onClick={() => handlePageChange('signup')} id="signup">Sign&nbsp;Up</button>
             </div>
         </header>
     )
