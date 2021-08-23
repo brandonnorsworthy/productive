@@ -53,6 +53,7 @@
     background-color: var(--card-background-light);
     border: none;
     padding: 20px 25px 80px 25px;
+    outline: 0;
 }
 
 .create button {

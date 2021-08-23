@@ -1,50 +1,43 @@
 import React from 'react'
 
-function Navbar(props) {
+function Navbar({ currentContent, handlecurrentContentChange }) {
     return (
         <aside>
             <div>
-
-                <div onClick={props.Clicked} name="Create" className={props.currentContent === "Create" ? 'active' : ''}>
-                    <span className="material-icons" unselectable="on" onselectstart="return false;"
-                        onmousedown="return false;">
+                <div onClick={() => handlecurrentContentChange('Create')} name="Create" className={currentContent === "Create" ? 'active' : ''}>
+                    <span className="material-icons" unselectable="on">
                         create
                     </span>
                     <p>
                         Create
                     </p>
                 </div>
-
-                <div onClick={props.Clicked} name="Stats" className={props.currentContent === "Stats" ? 'active' : ''}>
-                    <span className="material-icons" unselectable="on" onselectstart="return false;"
-                        onmousedown="return false;">
+                <div onClick={() => handlecurrentContentChange('Stats')} name="Stats" className={currentContent === "Stats" ? 'active' : ''}>
+                    <span className="material-icons" unselectable="on">
                         event_available
                     </span>
                     <p>
                         Stats
                     </p>
                 </div>
-                <div onClick={props.Clicked} name="Today" className={props.currentContent === "Today" ? 'active' : ''}>
-                    <span className="material-icons" unselectable="on" onselectstart="return false;"
-                        onmousedown="return false;">
+                <div onClick={() => handlecurrentContentChange('Today')} name="Today" className={currentContent === "Today" ? 'active' : ''}>
+                    <span className="material-icons" unselectable="on">
                         task_alt
                     </span>
                     <p>
                         Today
                     </p>
                 </div>
-                <div onClick={props.Clicked} name="Habits" className={props.currentContent === "Habits" ? 'active' : ''}>
-                    <span className="material-icons" unselectable="on" onselectstart="return false;"
-                        onmousedown="return false;">
+                <div onClick={() => handlecurrentContentChange('Habits')} name="Habits" className={currentContent === "Habits" ? 'active' : ''}>
+                    <span className="material-icons" unselectable="on">
                         format_list_bulleted
                     </span>
                     <p>
                         Habits
                     </p>
                 </div>
-                <div onClick={props.Clicked} name="Settings" className={props.currentContent === "Settings" ? 'active' : ''}>
-                    <span className="material-icons" unselectable="on" onselectstart="return false;"
-                        onmousedown="return false;">
+                <div onClick={() => handlecurrentContentChange('Settings')} name="Settings" className={currentContent === "Settings" ? 'active' : ''}>
+                    <span className="material-icons" unselectable="on">
                         settings
                     </span>
                     <p>

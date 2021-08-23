@@ -5,8 +5,7 @@ function Habit(props) {
         <div className="habit card">
             <div className="card-body">
                 <div className="habit-col-a">
-                    <span className="material-icons" unselectable="on" onselectstart="return false;"
-                        onmousedown="return false;">{props.habit.icon}</span>
+                    <span className="material-icons" unselectable="on">{props.habit.icon}</span>
                 </div>
                 <div className="habit-col-b">
                     <div className="row">

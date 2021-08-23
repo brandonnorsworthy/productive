@@ -1,45 +1,40 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './reset.css'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import Content from './components/Content'
+import Login from './components/Login'
 
-class App extends Component {
-	constructor() {
-		super()
-		this.state = {
-			currentContent: 'Today'
-		}
+function App() {
+	const [currentPage, setCurrentPage] = useState('Home');
+	const [currentContent, setCurrentContent] = useState('Today');
 
-		this.Clicked = this.Clicked.bind(this);
+	const handlePageChange = (page) => {
+		console.log(page)
+		setCurrentPage(page)
+		console.log(currentPage)
 	}
 
-	Clicked(e) {
-		// default to whatever they click
-		let eventTarget = e.target
-
-		// if the current target is the span inside the div set the target to the parent
-		if(eventTarget.tagName === 'SPAN' || eventTarget.tagName === 'P') {
-			eventTarget = eventTarget.parentElement;
-			console.log('reassigned', eventTarget)
-		}
-
-		this.setState({
-			currentContent: eventTarget.attributes.name.value
-		});
+	const handlecurrentContentChange = (page) => {
+		console.log(page)
+		setCurrentContent(page)
+		console.log(currentPage)
 	}
 
-	render() {
-		return (
-			<>
-				<Header />
-				<main>
-					<Navbar currentContent={this.state.currentContent} Clicked={this.Clicked} />
-					<Content currentContent={this.state.currentContent} />
-				</main>
-			</>
-		);
-	}
+	return (
+		<>
+			<Header handlePageChange={handlePageChange} />
+			<main>
+				{
+					currentPage === 'Home' ? [
+						<Navbar currentContent={currentContent} handlecurrentContentChange={handlecurrentContentChange} />,
+						<Content currentContent={currentContent} />
+					] :
+						<Login currentPage={currentPage} />
+				}
+			</main>
+		</>
+	);
 }
 
-export default App;
+export default App
