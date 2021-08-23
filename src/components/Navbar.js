@@ -4,6 +4,7 @@ function Navbar(props) {
     return (
         <aside>
             <div>
+
                 <div onClick={props.Clicked} name="Create" className={props.currentContent === "Create" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">
@@ -13,15 +14,7 @@ function Navbar(props) {
                         Create
                     </p>
                 </div>
-                <div onClick={props.Clicked} name="Today" className={props.currentContent === "Today" ? 'active' : ''}>
-                    <span className="material-icons" unselectable="on" onselectstart="return false;"
-                        onmousedown="return false;">
-                        task_alt
-                    </span>
-                    <p>
-                        Today
-                    </p>
-                </div>
+
                 <div onClick={props.Clicked} name="Stats" className={props.currentContent === "Stats" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on" onselectstart="return false;"
                         onmousedown="return false;">
@@ -29,6 +22,15 @@ function Navbar(props) {
                     </span>
                     <p>
                         Stats
+                    </p>
+                </div>
+                <div onClick={props.Clicked} name="Today" className={props.currentContent === "Today" ? 'active' : ''}>
+                    <span className="material-icons" unselectable="on" onselectstart="return false;"
+                        onmousedown="return false;">
+                        task_alt
+                    </span>
+                    <p>
+                        Today
                     </p>
                 </div>
                 <div onClick={props.Clicked} name="Habits" className={props.currentContent === "Habits" ? 'active' : ''}>

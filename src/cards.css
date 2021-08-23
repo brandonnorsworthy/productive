@@ -175,8 +175,8 @@
 
 @media only screen and (max-width: 576px) {
     main {
-        margin-right: 1vw;
-        margin-left: 1vw;
+        padding-bottom: 50px;
+        margin: 10px 1vw 0px 1vw;
         width: 98vw;
     }
 

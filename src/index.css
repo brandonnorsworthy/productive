@@ -194,6 +194,10 @@ aside a:hover {
         margin: 0px;
     }
 
+    aside div div:hover {
+        color: var(--font-highlight);
+    }
+
     aside span {
         font-size: 25px !important;
     }
