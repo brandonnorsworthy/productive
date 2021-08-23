@@ -24,6 +24,7 @@ body {
 }
 
 /* disable selection for any google icons */
+
 .material-icons {
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -41,12 +42,15 @@ body {
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--font-shaded);
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
 }
+
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: var(--font-shaded);
 }
+
 ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: var(--font-shaded);
@@ -107,7 +111,7 @@ header>div {
 main {
     display: flex;
     width: var(--current-body-width);
-    margin: 50px var(--current-body-margin) 0 var(--current-body-margin);
+    margin: 25px var(--current-body-margin) 0 var(--current-body-margin);
 }
 
 /* ! MENU BUTTON NAVBAR */
@@ -166,11 +170,42 @@ aside a:hover {
     color: var(--font-highlight);
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    main {
+        margin: 10px 15vw 0px 15vw;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    main {
+        margin: 10px 10vw 0px 10vw;
+        width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    main {
+        padding-bottom: 50px;
+        margin: 10px 5vw 0px 5vw;
+        width: 90vw;
+    }
+    aside div div:hover {
+        color: var(--font-highlight);
+    }
+    aside span {
+        font-size: 25px !important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
     .header-buttons {
         display: none;
     }
-
+    main {
+        padding-bottom: 50px;
+        margin: 10px 10vw 0px 10vw;
+        width: 80vw;
+    }
     aside {
         background-color: var(--card-background-dark);
         backface-visibility: hidden;
@@ -181,7 +216,6 @@ aside a:hover {
         left: 0;
         width: 100vw;
     }
-
     aside>div {
         display: flex;
         text-align: center;
@@ -189,21 +223,56 @@ aside a:hover {
         justify-content: space-between;
         margin: 0px 20px;
     }
-
     aside>div>div {
         margin: 0px;
     }
-
     aside div div:hover {
         color: var(--font-highlight);
     }
-
     aside span {
         font-size: 25px !important;
     }
-
     aside p {
         display: none;
     }
+}
 
+@media only screen and (max-width: 576px) {
+    .header-buttons {
+        display: none;
+    }
+    main {
+        padding-bottom: 50px;
+        margin: 10px 1vw 0px 1vw;
+        width: 98vw;
+    }
+    aside {
+        background-color: var(--card-background-dark);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        z-index: 150;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+    }
+    aside>div {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px 20px;
+    }
+    aside>div>div {
+        margin: 0px;
+    }
+    aside div div:hover {
+        color: var(--font-highlight);
+    }
+    aside span {
+        font-size: 25px !important;
+    }
+    aside p {
+        display: none;
+    }
 }
