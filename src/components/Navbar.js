@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Navbar({ currentContent, handlecurrentContentChange }) {
+function Navbar({ currentContent, handleCurrentContentChange }) {
     return (
         <aside>
             <div>
-                <div onClick={() => handlecurrentContentChange('Create')} name="Create" className={currentContent === "Create" ? 'active' : ''}>
+                <div onClick={() => handleCurrentContentChange('Create')} name="Create" className={currentContent === "Create" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on">
                         create
                     </span>
@@ -12,7 +12,7 @@ function Navbar({ currentContent, handlecurrentContentChange }) {
                         Create
                     </p>
                 </div>
-                <div onClick={() => handlecurrentContentChange('Stats')} name="Stats" className={currentContent === "Stats" ? 'active' : ''}>
+                <div onClick={() => handleCurrentContentChange('Stats')} name="Stats" className={currentContent === "Stats" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on">
                         event_available
                     </span>
@@ -20,7 +20,7 @@ function Navbar({ currentContent, handlecurrentContentChange }) {
                         Stats
                     </p>
                 </div>
-                <div onClick={() => handlecurrentContentChange('Today')} name="Today" className={currentContent === "Today" ? 'active' : ''}>
+                <div onClick={() => handleCurrentContentChange('Today')} name="Today" className={currentContent === "Today" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on">
                         task_alt
                     </span>
@@ -28,7 +28,7 @@ function Navbar({ currentContent, handlecurrentContentChange }) {
                         Today
                     </p>
                 </div>
-                <div onClick={() => handlecurrentContentChange('Habits')} name="Habits" className={currentContent === "Habits" ? 'active' : ''}>
+                <div onClick={() => handleCurrentContentChange('Habits')} name="Habits" className={currentContent === "Habits" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on">
                         format_list_bulleted
                     </span>
@@ -36,7 +36,7 @@ function Navbar({ currentContent, handlecurrentContentChange }) {
                         Habits
                     </p>
                 </div>
-                <div onClick={() => handlecurrentContentChange('Settings')} name="Settings" className={currentContent === "Settings" ? 'active' : ''}>
+                <div onClick={() => handleCurrentContentChange('Settings')} name="Settings" className={currentContent === "Settings" ? 'active' : ''}>
                     <span className="material-icons" unselectable="on">
                         settings
                     </span>

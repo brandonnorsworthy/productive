@@ -10,7 +10,7 @@ function App() {
 	const [currentContent, setCurrentContent] = useState('Today');
 
 	const handlePageChange = (page) => setCurrentPage(page)
-	const handlecurrentContentChange = (page) => setCurrentContent(page)
+	const handleCurrentContentChange = (page) => setCurrentContent(page)
 
 	return (
 		<>
@@ -18,7 +18,7 @@ function App() {
 			<main>
 				{
 					currentPage === 'Home' ? [
-						<Navbar currentContent={currentContent} handlecurrentContentChange={handlecurrentContentChange} />,
+						<Navbar currentContent={currentContent} handleCurrentContentChange={handleCurrentContentChange} />,
 						<Content currentContent={currentContent} />
 					] :
 						<Login currentPage={currentPage} handlePageChange={handlePageChange}/>
