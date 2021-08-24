@@ -4,19 +4,19 @@ function Header({ currentContent, handlePageChange }) {
     function generateHeaderTitle(text) {
         let str = 'error'
         switch (currentContent) {
-            case 'Create':
+            case 'create':
                 str = 'Create a Habit'
                 break;
-            case 'Stats':
+            case 'stats':
                 str = 'Previous Stats'
                 break;
-            case 'Today':
+            case 'today':
                 str = 'Today'
                 break;
-            case 'Habits':
+            case 'habits':
                 str = 'All Habits'
                 break;
-            case 'Settings':
+            case 'settings':
                 str = 'Settings'
                 break;
             default:
@@ -33,6 +33,7 @@ function Header({ currentContent, handlePageChange }) {
             </div>
             <div className="header-title">{generateHeaderTitle(currentContent)}</div>
             <div className="header-buttons">
+                <button onClick={() => handlePageChange('home')} id="home">Home</button>
                 <button onClick={() => handlePageChange('login')} id="login">Login</button>
                 <button onClick={() => handlePageChange('signup')} id="signup">Sign&nbsp;Up</button>
             </div>

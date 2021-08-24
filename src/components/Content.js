@@ -15,8 +15,8 @@ const habit = {
 function Content(props) {
     return (
         <div className="content">
-            {props.currentContent === 'Today' ? <Hero /> : <></>}
-            {props.currentContent === 'Create' ? <Create /> : props.currentContent === 'Today' || props.currentContent === 'Habits' ? <Habit habit={habit} /> : <></>}
+            {props.currentContent === 'today' ? <Hero /> : <></>}
+            {props.currentContent === 'create' ? <Create /> : props.currentContent === 'today' || props.currentContent === 'habits' ? <Habit habit={habit} /> : <></>}
         </div>
     )
 }

@@ -28,20 +28,20 @@ function Create() {
 
         let valid = false;
 
-        if(!title) {
+        if (!title) {
             alert('Please enter a title.');
-        } else if(!description) {
+        } else if (!description) {
             alert('Please enter a description.');
         } else {
             console.log(`${title} is valid.`);
             valid = true;
         }
 
-        if(valid) {
+        if (valid) {
             const response = await fetch('/api/create', {
                 method: 'POST',
                 body: JSON.stringify({ title, description, color, icon, repeating, days }),
-                headers: { 'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
             });
 
             if (response.ok) {

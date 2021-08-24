@@ -1,11 +1,20 @@
 import React from 'react'
 
-const Login = ({ currentPage, handlePageChange }) => {
+function Login({ currentPage, handlePageChange }) {
+    function createLoginCard() {
+        return (<div className="create card">
+            <div className="card-body">
+                <div className="row">
+                    <input value='test' type="text" name="title" placeholder="Title" />
+
+                </div>
+            </div>
+        </div>)
+    }
+
     return (
         <div className="content">
-            {currentPage === 'Login' ? <div className="login card">
-
-            </div> : <div className="signup card">
+            {currentPage === 'Login' ? { createLoginCard } : <div className="signup card">
 
             </div>}
         </div>
