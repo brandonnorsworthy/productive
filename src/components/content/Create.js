@@ -65,7 +65,7 @@ function Create() {
                 <div className="row mt-3">
                     <div className="create-col-a">
                         <div className="icon">
-                            <span class="material-icons">
+                            <span className="material-icons">
                                 shopping_cart
                             </span>
                         </div>
@@ -73,7 +73,7 @@ function Create() {
                     </div>
                     <div className="create-col-b">
                         <div className="icon">
-                            <span class="material-icons">
+                            <span className="material-icons">
                                 palette
                             </span>
                         </div>
@@ -85,7 +85,7 @@ function Create() {
                         Repeat
                     </div>
                     <div className="j-e">
-                        <span class="material-icons">
+                        <span className="material-icons">
                             toggle_on
                         </span>
                     </div>
@@ -95,7 +95,7 @@ function Create() {
                         Weekends
                     </div>
                     <div className="j-e">
-                        <span class="material-icons">
+                        <span className="material-icons">
                             date_range
                         </span>
                     </div>
@@ -105,7 +105,7 @@ function Create() {
                         Set end date
                     </div>
                     <div className="j-e">
-                        <span class="material-icons">
+                        <span className="material-icons">
                             toggle_off
                         </span>
                     </div>
