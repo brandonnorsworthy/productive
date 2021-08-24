@@ -1,13 +1,22 @@
 import React from 'react'
 
-const Login = ({ currentPage }) => {
+function Login({ currentPage, handlePageChange }) {
+    function createLoginCard() {
+        return (<div key="login" className="create card">
+            <div className="card-body">
+                <div className="row">
+                    <input value='test' type="text" name="title" placeholder="Title" />
+                </div>
+            </div>
+        </div>)
+    }
+
     return (
         <div className="content">
-            {currentPage === 'Login' ? <div className="login card">
+            {/* !basic ternary of the login page wip */}
+            {/* {currentPage === 'login' ? { createLoginCard } : <div className="signup card">
 
-            </div> : <div className="signup card">
-
-            </div>}
+            </div>} */}
         </div>
     )
 }
