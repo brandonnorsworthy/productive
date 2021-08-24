@@ -12,11 +12,28 @@ const habit = {
     subject: 'Glasses'
 }
 
+const habits = () =>
+    fetch('/api/habits', {
+        method: 'GET',
+    })
+        .then((res) => res.json())
+
+// This function will map through and filter by day - do not touch yet
+// const todaysHabits = () =>
+//     fetch('/api/habits', {
+//         method: 'GET',
+//     })
+//         .then((res) => res.json())
+
 function Content(props) {
     return (
         <div className="content">
-            {props.currentContent === 'today' ? <Hero /> : <></>}
-            {props.currentContent === 'create' ? <Create /> : props.currentContent === 'today' || props.currentContent === 'habits' ? <Habit habit={habit} /> : <></>}
+            {props.currentContent === 'create' ? <Create />
+                : props.currentContent === 'today' ? <Content />
+                    : props.currentContent === 'habits' ? habits.map((habit) => (
+                        <Habit habit={habit} />))
+                        // <Settings />
+                        : <></>}
         </div>
     )
 }
