@@ -18,6 +18,13 @@ const habits = () =>
     })
         .then((res) => res.json())
 
+// This function will map through and filter by day - do not touch yet
+// const todaysHabits = () =>
+//     fetch('/api/habits', {
+//         method: 'GET',
+//     })
+//         .then((res) => res.json())
+
 function Content(props) {
     return (
         <div className="content">
