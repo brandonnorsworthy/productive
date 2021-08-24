@@ -14,7 +14,7 @@ function App() {
 
 	return (
 		<>
-			<Header handlePageChange={handlePageChange} />
+			<Header currentContent={currentContent} handlePageChange={handlePageChange} />
 			<main>
 				{
 					currentPage === 'Home' ? [
