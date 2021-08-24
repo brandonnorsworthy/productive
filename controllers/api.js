@@ -2,6 +2,7 @@ const router = require('express').Router();
 const mongojs = require('mongojs')
 const {User, Habits} = require('../models/index');
 
+// Create A User
 router.post('/api/user', ({body}, res) => {
     User.create(body)
     .then(dbUser => {
@@ -12,8 +13,9 @@ router.post('/api/user', ({body}, res) => {
     })
 })
 
-router.get('/api/user/:id', (req, res) => {
-    User.findOne({_id : mongojs.ObjectId(req.params.id)})
+// Find All Users
+router.get('/api/user/', (req, res) => {
+    User.find()
     .then(data => {
         res.status(200).json(data);
     })
@@ -22,13 +24,42 @@ router.get('/api/user/:id', (req, res) => {
     })
 })
 
-router.post('/api/habit', ({body}, res) => {
+// Find User By ID
+router.get('/api/user/:id', (req, res) => {
+    User.findOne({_id : mongojs.ObjectId(req.params.id)})
+    .populate('habits')
+    .then(dbHabits => {
+        res.json(dbHabits)
+    })
+    .catch(err => {
+        res.json(err)
+    })
+})
+
+// Create Habits
+router.post('/api/habits', ({body}, res) => {
     Habits.create(body)
-    .then(dbHabit => {
-        res.json(dbHabit);
+    .then(({_id}) => {
+        User.findOneAndUpdate({}, {$push: {habits: _id} }, {new: true})
+        .then(dbHabit => {
+            res.json(dbHabit)
+        })
     })
     .catch(err => {
         res.status(400).json(err);
     })
 })
+
+// Grab Habits By User
+router.get('/api/habits/:id', (req, res) => {
+    Habits.find({user_id: req.params.id})
+    .then(data => {
+        res.json(data)
+    })
+    .catch(err => {
+        res.json(err)
+    })
+})
+
+
 module.exports = router;
