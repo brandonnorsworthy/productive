@@ -9,21 +9,12 @@ function App() {
 	const [currentPage, setCurrentPage] = useState('Home');
 	const [currentContent, setCurrentContent] = useState('Today');
 
-	const handlePageChange = (page) => {
-		console.log(page)
-		setCurrentPage(page)
-		console.log(currentPage)
-	}
-
-	const handlecurrentContentChange = (page) => {
-		console.log(page)
-		setCurrentContent(page)
-		console.log(currentPage)
-	}
+	const handlePageChange = (page) => setCurrentPage(page)
+	const handlecurrentContentChange = (page) => setCurrentContent(page)
 
 	return (
 		<>
-			<Header handlePageChange={handlePageChange} />
+			<Header currentContent={currentContent} handlePageChange={handlePageChange} />
 			<main>
 				{
 					currentPage === 'Home' ? [
