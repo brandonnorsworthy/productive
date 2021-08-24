@@ -30,9 +30,9 @@ function Content(props) {
         <div className="content">
             {props.currentContent === 'create' ? <Create />
                 : props.currentContent === 'today' ? <Content />
-                    : props.currentContent === 'habits' ? habits.map((habit) => (
-                        <Habit habit={habit} />))
-                        // <Settings />
+                    // : props.currentContent === 'habits' ? habits.map((habit) => (
+                    //     <Habit habit={habit} />))
+                    //     // <Settings />
                         : <></>}
         </div>
     )
