@@ -15,7 +15,7 @@ function Habit(props) {
                         </div>
                         <div>
                             <h2><b>{props.habit.quantity.count}
-                            {props.habit.quantity.total}</b></h2>
+                                {props.habit.quantity.total}</b></h2>
                         </div>
                     </div>
                     <div className="row">

@@ -12,11 +12,21 @@ const habit = {
     subject: 'Glasses'
 }
 
+const habits = () =>
+    fetch('/api/habits', {
+        method: 'GET',
+    })
+        .then((res) => res.json())
+
 function Content(props) {
     return (
         <div className="content">
-            {props.currentContent === 'Today' ? <Hero /> : <></>}
-            {props.currentContent === 'Create' ? <Create /> : props.currentContent === 'Today' || props.currentContent === 'Habits' ? <Habit habit={habit} /> : <></>}
+            {props.currentContent === 'Create' ? <Create />
+                : props.currentContent === 'Today' ? <Content />
+                    : props.currentContent === 'Habits' ? habits.map((habit) => (
+                        <Habit habit={habit} />))
+                        // <Settings />
+                        : <></>}
         </div>
     )
 }
