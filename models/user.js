@@ -15,10 +15,6 @@ const userSchema = new Schema({
         trim: true,
         required: "Please enter a password"
     },
-    habits: {
-        type: Schema.Types.ObjectId,
-        ref: 'Habits'
-    }
 });
 
 const User = mongoose.model("User", userSchema);

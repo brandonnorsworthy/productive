@@ -26,6 +26,10 @@ const habitsSchema = new Schema({
         type: Array,
         default: [true,true,true,true,true,true,true]
     },
+    user_id: {
+        type: Schema.Types.ObjectId,
+        required: true
+    }
 })
 
 const Habits = mongoose.model("Habits", habitsSchema);
