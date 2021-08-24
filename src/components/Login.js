@@ -2,11 +2,10 @@ import React from 'react'
 
 function Login({ currentPage, handlePageChange }) {
     function createLoginCard() {
-        return (<div className="create card">
+        return (<div key="login" className="create card">
             <div className="card-body">
                 <div className="row">
                     <input value='test' type="text" name="title" placeholder="Title" />
-
                 </div>
             </div>
         </div>)
@@ -14,9 +13,10 @@ function Login({ currentPage, handlePageChange }) {
 
     return (
         <div className="content">
-            {currentPage === 'Login' ? { createLoginCard } : <div className="signup card">
+            {/* !basic ternary of the login page wip */}
+            {/* {currentPage === 'login' ? { createLoginCard } : <div className="signup card">
 
-            </div>}
+            </div>} */}
         </div>
     )
 }
